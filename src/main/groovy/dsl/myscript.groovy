@@ -19,8 +19,21 @@ use (DistanceCategory) {
     move right, 3.meters
     move left, 10.km
     move left, 3.m
+    // define an operator '/' requires method called div()
+    // DistanceCategory.getKm() returns a Distance() object
+    // so we have to define div(Duration) method in Distance object
+    // 5.km/h is the same as 5.getKm().div(h)
     move right, by: 3.m, at: 5.km/h
     move left, by: 10.km
+    // named arguments are down as Maps, the named arguments
+    // are stored into a map and passed as the 1st argument,
+    // followed by all others in the order they appear
     move forward, by: 3.m, at: 30.m/s
+
+    // since named arguments can go in any order,
+    // we can do these
+    move at: 10.km/min, backward, by: 10.m
+    move by: 25.km, at: 10.m/s, forward
+
 
 }

@@ -11,11 +11,13 @@ import org.codehaus.groovy.control.customizers.*;
 // this is how it's done.
 def binding = new Binding(
         robot: new Robot()
+        //h: Duration.hour
 );
 
 def importCustomizer = new ImportCustomizer();
 importCustomizer.addStaticStars 'dsl.Direction';
 importCustomizer.addStaticStars 'dsl.DistanceUnit';
+importCustomizer.addStaticStars 'dsl.Duration';
 
 def config = new CompilerConfiguration();
 config.addCompilationCustomizers(importCustomizer);

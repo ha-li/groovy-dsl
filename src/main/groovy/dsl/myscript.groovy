@@ -19,5 +19,8 @@ use (DistanceCategory) {
     move right, 3.meters
     move left, 10.km
     move left, 3.m
+    move right, by: 3.m, at: 5.km/h
+    move left, by: 10.km
+    move forward, by: 3.m, at: 30.m/s
 
 }
